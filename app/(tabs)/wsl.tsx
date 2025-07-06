@@ -1,20 +1,8 @@
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { StyleSheet } from 'react-native';
-import { ListItem } from 'react-native-elements';
 
 export default function Tab() {
-  const list = [
-    {
-      title: 'Appointments',
-      icon: 'av-timer',
-    },
-    {
-      title: 'Trips',
-      icon: 'flight-takeoff',
-    },
-  ];
-
   return (
     <ThemedView style={styles.container}>
       <ThemedView style={styles.stepContainer}>
@@ -31,31 +19,6 @@ export default function Tab() {
           {`Tap the Explore tab to learn more about what's included in this starter app.`}
         </ThemedText>
       </ThemedView>
-      <List
-        data={[
-          {
-            id: '1',
-            title: 'Hello',
-            subTitle: 'World',
-          },
-          {
-            id: '2',
-            title: 'Hello',
-            subTitle: 'World',
-          },
-
-          {
-            id: '3',
-            title: 'Hello',
-            subTitle: 'World',
-          },
-        ]}
-        estimatedItemSize={ESTIMATED_ITEM_HEIGHT.withSubTitle}
-        renderItem={(info) => {
-          return <ListItem {...info} />;
-        }}
-        keyExtractor={(item) => item.id}
-      />
     </ThemedView>
   );
 }
